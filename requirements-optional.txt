@@ -1,0 +1,8 @@
+# Optional Parquet support
+pyarrow>=14,<23
+
+# Optional explainability
+shap>=0.45,<1
+
+# Optional hyperparameter optimization beyond the built-in randomized search
+optuna>=3.6,<5

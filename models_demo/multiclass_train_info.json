@@ -1,0 +1,73 @@
+{
+  "_meta": {
+    "seed": 42,
+    "task": "multiclass",
+    "n_train": 3000,
+    "quick": true,
+    "corr_threshold": 0.95,
+    "protocol": "research",
+    "demo": true,
+    "partition_resolution": {
+      "mode": "filename_fallback_noncanonical_row_counts",
+      "filename_train_candidate": "/home/saiduzzaman/PycharmProjects/unsw_nb15-network-intrusion-detection/ml-network-intrusion-detection/data/synthetic/UNSW_NB15_training-set.csv",
+      "filename_test_candidate": "/home/saiduzzaman/PycharmProjects/unsw_nb15-network-intrusion-detection/ml-network-intrusion-detection/data/synthetic/UNSW_NB15_testing-set.csv",
+      "resolved_train_file": "/home/saiduzzaman/PycharmProjects/unsw_nb15-network-intrusion-detection/ml-network-intrusion-detection/data/synthetic/UNSW_NB15_training-set.csv",
+      "resolved_test_file": "/home/saiduzzaman/PycharmProjects/unsw_nb15-network-intrusion-detection/ml-network-intrusion-detection/data/synthetic/UNSW_NB15_testing-set.csv",
+      "train_rows_by_name": 3000,
+      "test_rows_by_name": 1500,
+      "train_rows": 3000,
+      "test_rows": 1500,
+      "filename_roles_swapped": false,
+      "expected_train_rows": 175341,
+      "expected_test_rows": 82332
+    },
+    "hygiene": {
+      "train_rows_before_cleanup": 3000,
+      "train_duplicates_before_cleanup": 0,
+      "train_test_shared_distinct_rows_before_cleanup": 0,
+      "train_duplicate_rows_removed": 0,
+      "train_test_overlap_rows_removed": 0,
+      "train_rows_after_cleanup": 3000
+    },
+    "threshold_policy": null,
+    "classes": [
+      "Analysis",
+      "Backdoor",
+      "DoS",
+      "Exploits",
+      "Fuzzers",
+      "Generic",
+      "Normal",
+      "Reconnaissance",
+      "Shellcode",
+      "Worms"
+    ]
+  },
+  "logistic_regression": {
+    "cv": {},
+    "cv_folds": 0,
+    "cv_note": "Skipped multiclass CV because the rarest class has fewer than 2 training samples.",
+    "train_time_s": 0.19696476699937193,
+    "train_rss_delta_mb": 2.8303359999999884,
+    "n_features_in": 42,
+    "n_features_out": 63
+  },
+  "random_forest": {
+    "cv": {},
+    "cv_folds": 0,
+    "cv_note": "Skipped multiclass CV because the rarest class has fewer than 2 training samples.",
+    "train_time_s": 0.09749041799841507,
+    "train_rss_delta_mb": 6.7174400000000105,
+    "n_features_in": 42,
+    "n_features_out": 63
+  },
+  "xgboost": {
+    "cv": {},
+    "cv_folds": 0,
+    "cv_note": "Skipped multiclass CV because the rarest class has fewer than 2 training samples.",
+    "train_time_s": 0.26673752299939224,
+    "train_rss_delta_mb": 2.289664000000016,
+    "n_features_in": 42,
+    "n_features_out": 63
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "_meta": {
+    "seed": 42,
+    "task": "binary",
+    "n_train": 3000,
+    "quick": true,
+    "corr_threshold": 0.95,
+    "protocol": "research",
+    "demo": true,
+    "partition_resolution": {
+      "mode": "filename_fallback_noncanonical_row_counts",
+      "filename_train_candidate": "/home/saiduzzaman/PycharmProjects/unsw_nb15-network-intrusion-detection/ml-network-intrusion-detection/data/synthetic/UNSW_NB15_training-set.csv",
+      "filename_test_candidate": "/home/saiduzzaman/PycharmProjects/unsw_nb15-network-intrusion-detection/ml-network-intrusion-detection/data/synthetic/UNSW_NB15_testing-set.csv",
+      "resolved_train_file": "/home/saiduzzaman/PycharmProjects/unsw_nb15-network-intrusion-detection/ml-network-intrusion-detection/data/synthetic/UNSW_NB15_training-set.csv",
+      "resolved_test_file": "/home/saiduzzaman/PycharmProjects/unsw_nb15-network-intrusion-detection/ml-network-intrusion-detection/data/synthetic/UNSW_NB15_testing-set.csv",
+      "train_rows_by_name": 3000,
+      "test_rows_by_name": 1500,
+      "train_rows": 3000,
+      "test_rows": 1500,
+      "filename_roles_swapped": false,
+      "expected_train_rows": 175341,
+      "expected_test_rows": 82332
+    },
+    "hygiene": {
+      "train_rows_before_cleanup": 3000,
+      "train_duplicates_before_cleanup": 0,
+      "train_test_shared_distinct_rows_before_cleanup": 0,
+      "train_duplicate_rows_removed": 0,
+      "train_test_overlap_rows_removed": 0,
+      "train_rows_after_cleanup": 3000
+    },
+    "threshold_policy": {
+      "enabled": true,
+      "target_fpr": 0.05,
+      "source": "out_of_fold_training_predictions"
+    }
+  },
+  "logistic_regression": {
+    "cv": {
+      "f1": {
+        "mean": 0.9498481061948554,
+        "std": 0.0035645123760409017
+      },
+      "recall": {
+        "mean": 0.9307103250630301,
+        "std": 0.0036519053444847094
+      },
+      "precision": {
+        "mean": 0.9697966779286039,
+        "std": 0.004348784493702424
+      },
+      "pr_auc": {
+        "mean": 0.9904026358766859,
+        "std": 0.0010546602617015016
+      }
+    },
+    "cv_folds": 3,
+    "decision_threshold": {
+      "threshold": 0.5800176528949744,
+      "target_fpr": 0.05,
+      "oof_fpr": 0.043523316062176166,
+      "oof_recall": 0.9159705159705159,
+      "oof_precision": 0.9779643231899265,
+      "oof_f1": 0.9459528038568891,
+      "oof_tn": 923,
+      "oof_fp": 42,
+      "oof_fn": 171,
+      "oof_tp": 1864,
+      "selection": "max_f1_under_fpr_cap",
+      "source": "out_of_fold_training_predictions"
+    },
+    "train_time_s": 0.06823531099871616,
+    "train_rss_delta_mb": 0.37273599999997487,
+    "n_features_in": 42,
+    "n_features_out": 63
+  },
+  "random_forest": {
+    "cv": {
+      "f1": {
+        "mean": 0.9634835716699919,
+        "std": 0.0034268398051787224
+      },
+      "recall": {
+        "mean": 0.9597020026269183,
+        "std": 0.005449980610647504
+      },
+      "precision": {
+        "mean": 0.9673038920875926,
+        "std": 0.0013719137149100212
+      },
+      "pr_auc": {
+        "mean": 0.9936678194125318,
+        "std": 0.000574415519066655
+      }
+    },
+    "cv_folds": 3,
+    "decision_threshold": {
+      "threshold": 0.55,
+      "target_fpr": 0.05,
+      "oof_fpr": 0.046632124352331605,
+      "oof_recall": 0.9464373464373464,
+      "oof_precision": 0.9771689497716894,
+      "oof_f1": 0.9615576635047429,
+      "oof_tn": 920,
+      "oof_fp": 45,
+      "oof_fn": 109,
+      "oof_tp": 1926,
+      "selection": "max_f1_under_fpr_cap",
+      "source": "out_of_fold_training_predictions"
+    },
+    "train_time_s": 0.07849318499938818,
+    "train_rss_delta_mb": 0.8642560000000117,
+    "n_features_in": 42,
+    "n_features_out": 63
+  },
+  "xgboost": {
+    "cv": {
+      "f1": {
+        "mean": 0.9466890142238146,
+        "std": 0.0043013133397615715
+      },
+      "recall": {
+        "mean": 0.920883275914751,
+        "std": 0.008030150801578251
+      },
+      "precision": {
+        "mean": 0.974032702583135,
+        "std": 0.0035018125693101368
+      },
+      "pr_auc": {
+        "mean": 0.9928695306392105,
+        "std": 0.0003084938728101995
+      }
+    },
+    "cv_folds": 3,
+    "decision_threshold": {
+      "threshold": 0.5077142715454102,
+      "target_fpr": 0.05,
+      "oof_fpr": 0.049740932642487044,
+      "oof_recall": 0.918918918918919,
+      "oof_precision": 0.9749739311783108,
+      "oof_f1": 0.9461168732608146,
+      "oof_tn": 917,
+      "oof_fp": 48,
+      "oof_fn": 165,
+      "oof_tp": 1870,
+      "selection": "max_f1_under_fpr_cap",
+      "source": "out_of_fold_training_predictions"
+    },
+    "train_time_s": 0.05103891800172278,
+    "train_rss_delta_mb": 0.6348800000000097,
+    "n_features_in": 42,
+    "n_features_out": 63
+  }
+}
